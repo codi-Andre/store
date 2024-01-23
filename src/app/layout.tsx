@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable} dark`}>
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   )
