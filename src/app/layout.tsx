@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
+import { inter, poppins } from "@/assets/fonts"
 
 export const metadata: Metadata = {
   title: "Store",
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${poppins.variable} ${inter.variable} dark`}>
       <body className="antialiased">{children}</body>
     </html>
   )
