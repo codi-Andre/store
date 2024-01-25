@@ -1,8 +1,10 @@
+import { ShoppingBagIcon } from "@/assets/icons/shopping-bag"
 import Image from "next/image"
 import Link from "next/link"
 
 interface ProductCardProps {
   category: string
+  id: number
   image: string
   price: number
   title: string
@@ -10,17 +12,18 @@ interface ProductCardProps {
 
 export function ProductCard({
   category,
+  id,
   image,
   price,
   title
 }: ProductCardProps) {
   return (
     <Link
-      className="group inline-block h-96 w-80 rounded-xl bg-primary-100 p-4"
-      href="/"
+      className="group relative inline-block h-96 w-80 rounded-xl bg-primary-100 p-4"
+      href={`/product/${id}`}
     >
       <Image
-        className="mx-auto mt-2 h-52 w-52 object-scale-down duration-500 group-hover:scale-110"
+        className="z-10 mx-auto mt-2 h-52 w-52 object-scale-down duration-500 group-hover:scale-110"
         alt=""
         src={image}
         height={250}
@@ -40,6 +43,13 @@ export function ProductCard({
       </p>
 
       <p className="mt-3">{title}</p>
+
+      <button
+        className="absolute right-2 top-2 rounded-full border-2 border-neutral-200 bg-white p-2 hover:border-0"
+        aria-label="Add to the cart"
+      >
+        <ShoppingBagIcon className="h-8 w-8" />
+      </button>
     </Link>
   )
 }

@@ -30,6 +30,7 @@ export default async function Home() {
           {featuredProducts.map((product) => (
             <li key={product.id}>
               <ProductCard
+                id={product.id}
                 category={product.category}
                 image={product.image}
                 price={product.price}
