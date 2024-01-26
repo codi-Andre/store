@@ -18,7 +18,7 @@ export function Reviews({ ratings, reviews }: StarRatingsProps) {
         style={{
           backgroundImage: `linear-gradient(to right, #facc15 0%, #facc15 ${percentage}%, transparent ${percentage + 0.1}%)`
         }}
-        className={`relative bg-clip-text pr-1 text-3xl leading-7 tracking-[-0.27rem] text-transparent`}
+        className={`relative bg-clip-text pr-1 text-3xl leading-7 tracking-[-0.29rem] text-transparent`}
       >
         &#9733; &#9733; &#9733; &#9733; &#9733;
         <span className="absolute left-[0.04rem] top-[0.20rem] flex text-text-950">

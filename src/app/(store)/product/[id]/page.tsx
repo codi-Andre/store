@@ -1,3 +1,4 @@
+import { AddToCartButton } from "@/components/add-to-cart-button"
 import { Reviews } from "@/components/reviews"
 import { Product } from "@/entities/product"
 import { fetchApi } from "@/lib/fetchApi/fetchApi"
@@ -49,13 +50,7 @@ export default async function ProductPage({ params }: ProductProps) {
 
       <Reviews ratings={product.rating.rate} reviews={product.rating.count} />
 
-      <button
-        className="my-4 max-w-max rounded-full bg-gradient-to-br from-primary-500
-       to-primary-700 px-4 py-2 text-white shadow-[4px_4px_4px_rgba(0,0,0,0.3)]
-       duration-300 hover:shadow-none"
-      >
-        Add to the cart
-      </button>
+      <AddToCartButton productId={product.id} />
 
       <h3 className="col-span-2 mt-4 font-bold">Description</h3>
 

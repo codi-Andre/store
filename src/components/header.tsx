@@ -1,7 +1,7 @@
 import { AccountIcon } from "@/assets/icons/account"
 import { SearchIcon } from "@/assets/icons/search"
-import { ShoppingBagIcon } from "@/assets/icons/shopping-bag"
 import Link from "next/link"
+import { CartButton } from "./cart-button"
 
 export function Header() {
   return (
@@ -20,15 +20,12 @@ export function Header() {
       </h1>
 
       <div className="flex justify-self-end">
-        <button className="flex items-center gap-1 p-2">
-          <ShoppingBagIcon className="h-8 w-8" />{" "}
-          <span className="sr-only lg:not-sr-only">Cart (0)</span>
-        </button>
-
         <Link className="flex items-center gap-1 p-2" href="/">
-          <span className="sr-only lg:not-sr-only">Account</span>{" "}
           <AccountIcon className="h-8 w-8" />
+          <span className="sr-only lg:not-sr-only">Account</span>{" "}
         </Link>
+
+        <CartButton />
       </div>
 
       <form

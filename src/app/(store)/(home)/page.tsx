@@ -28,15 +28,14 @@ export default async function Home() {
 
         <ul className="flex flex-col flex-wrap items-center justify-evenly gap-4 md:flex-row">
           {featuredProducts.map((product) => (
-            <li key={product.id}>
-              <ProductCard
-                id={product.id}
-                category={product.category}
-                image={product.image}
-                price={product.price}
-                title={product.title}
-              />
-            </li>
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              category={product.category}
+              image={product.image}
+              price={product.price}
+              title={product.title}
+            />
           ))}
         </ul>
       </section>
