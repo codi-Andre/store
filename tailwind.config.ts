@@ -13,6 +13,19 @@ const config: Config = {
       padding: "0.5rem"
     },
     extend: {
+      keyframes: {
+        "slide-left": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" }
+        }
+      },
+      animation: {
+        "slide-left": "slide-left 0.5s"
+      },
+      boxShadow: {
+        inside: "inset 3px 3px 4px rgba(0,0,0,0.2)",
+        outside: "4px 4px 4px rgba(0,0,0,0.3)"
+      },
       colors: {
         text: {
           50: "var(--text-50)",

@@ -1,5 +1,7 @@
 "use client"
 
+import { Cart } from "@/components/cart"
+import { useLocalStorage } from "@/hooks/useLocalStorage"
 import { createContext, useContext, useState } from "react"
 
 interface CartItem {
@@ -30,7 +32,7 @@ export function useCart() {
 }
 
 export function CartProvider({ children }: CartProps) {
-  const [cart, setCart] = useState([] as CartItem[])
+  const [cart, setCart] = useLocalStorage("store:cart-0.1.0", [] as CartItem[])
   const [isOpen, setIsOpen] = useState(false)
   const cartQuantity = cart.reduce(
     (quantity, item) => quantity + item.quantity,
@@ -95,6 +97,7 @@ export function CartProvider({ children }: CartProps) {
       }}
     >
       {children}
+      <Cart />
     </CartContext.Provider>
   )
 }
