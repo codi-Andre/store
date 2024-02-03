@@ -2,6 +2,7 @@ import { AccountIcon } from "@/assets/icons/account"
 import Link from "next/link"
 import { CartButton } from "./cart-button"
 import { SearchForm } from "./search-form"
+import { Suspense } from "react"
 
 export function Header() {
   return (
@@ -28,7 +29,9 @@ export function Header() {
         <CartButton />
       </div>
 
-      <SearchForm />
+      <Suspense fallback={null}>
+        <SearchForm />
+      </Suspense>
     </header>
   )
 }
