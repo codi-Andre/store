@@ -23,7 +23,7 @@ const config: Config = {
         "slide-left": "slide-left 0.5s"
       },
       boxShadow: {
-        inside: "inset 3px 3px 4px rgba(0,0,0,0.2)",
+        inside: "inset 4px 4px 5px rgba(0,0,0,0.3)",
         outside: "4px 4px 4px rgba(0,0,0,0.3)"
       },
       colors: {

@@ -15,7 +15,8 @@ export function AddToCartButton({ productId, icon }: AddToCartButtonProps) {
     return (
       <button
         onClick={(e) => increaseCartQuantity(productId)}
-        className="absolute right-2 top-2 rounded-full border-2 border-neutral-200 bg-white p-2 hover:border-0"
+        className="absolute right-2 top-2 rounded-full bg-white p-2
+         shadow-outside hover:shadow-none  active:shadow-inside"
         aria-label="Add to the cart"
       >
         <ShoppingBagIcon className="h-8 w-8" />
@@ -28,7 +29,7 @@ export function AddToCartButton({ productId, icon }: AddToCartButtonProps) {
       onClick={() => increaseCartQuantity(productId)}
       className="my-4 max-w-max rounded-full bg-gradient-to-br from-primary-500
    to-primary-700 px-4 py-2 font-medium text-white
-   shadow-[4px_4px_4px_rgba(0,0,0,0.3)] duration-300 hover:shadow-none"
+   shadow-outside duration-300 hover:shadow-none active:shadow-inside"
     >
       Add to the cart
     </button>

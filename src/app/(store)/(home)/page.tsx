@@ -20,9 +20,9 @@ export default async function Home() {
   const featuredProducts = await getFeaturedProducts()
 
   return (
-    <main className="container">
+    <main className="container my-6 md:mb-12">
       <section>
-        <h2 className="mb-3 mt-6 text-xl font-medium lg:mb-6 lg:mt-12">
+        <h2 className="mb-3 mt-6 text-xl font-bold lg:mb-6 lg:mt-12">
           Featured products
         </h2>
 

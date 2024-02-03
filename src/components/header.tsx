@@ -1,7 +1,7 @@
 import { AccountIcon } from "@/assets/icons/account"
-import { SearchIcon } from "@/assets/icons/search"
 import Link from "next/link"
 import { CartButton } from "./cart-button"
+import { SearchForm } from "./search-form"
 
 export function Header() {
   return (
@@ -28,18 +28,7 @@ export function Header() {
         <CartButton />
       </div>
 
-      <form
-        className="col-span-2 flex max-h-10 max-w-80 gap-1 rounded-full
-       bg-neutral-100 px-4 py-2 sm:col-span-1 sm:col-start-2 sm:row-start-1"
-      >
-        <SearchIcon className="text-neutral-400" />
-
-        <input
-          className="min-w-0 bg-transparent px-1"
-          placeholder="Search products..."
-          type="text"
-        />
-      </form>
+      <SearchForm />
     </header>
   )
 }

@@ -1,5 +1,7 @@
 import products from "@/collections/products.json"
 
-export function GET() {
+export async function GET() {
+  await new Promise((resolve) => setTimeout(resolve, 1000))
+
   return Response.json(products)
 }

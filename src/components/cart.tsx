@@ -30,7 +30,7 @@ export function Cart() {
   )
 
   return (
-    <div
+    <section
       className={`${isOpen ? "flex" : "hidden"} fixed right-0 top-0 h-screen min-w-[22.5rem] max-w-[22.5rem]
        animate-slide-left flex-col bg-neutral-100`}
     >
@@ -83,6 +83,6 @@ export function Cart() {
           Checkout
         </Link>
       </div>
-    </div>
+    </section>
   )
 }
