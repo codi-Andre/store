@@ -1,7 +1,6 @@
 import { ProductCard } from "@/components/product-card"
-import { Product } from "@/entities/product"
-import { fetchApi } from "@/lib/fetchApi/fetchApi"
 import { redirect } from "next/navigation"
+import products from "@/collections/products.json"
 
 interface SearchPageProps {
   searchParams: {
@@ -9,12 +8,12 @@ interface SearchPageProps {
   }
 }
 
-async function searchProducts(query: string): Promise<Product[]> {
-  const response = await fetchApi(`/products/search?q=${query}`)
+async function mockedApi(query: string) {
+  await new Promise((resolve) => setTimeout(resolve, 1000))
 
-  const products = await response.json()
-
-  return products
+  return products.filter((product) =>
+    product.title.toLocaleLowerCase().includes(query.toLocaleLowerCase())
+  )
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
@@ -24,7 +23,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     redirect("/")
   }
 
-  const products = await searchProducts(query)
+  const products = await mockedApi(query)
 
   return (
     <main className="container my-6 md:mb-12">

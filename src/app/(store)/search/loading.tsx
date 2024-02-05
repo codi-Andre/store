@@ -8,7 +8,7 @@ export default function SearchLoading() {
         <SearchParamsComponent />
       </Suspense>
 
-      <div className="flex flex-wrap items-center justify-evenly gap-4">
+      <div className="flex flex-wrap items-center justify-evenly gap-8">
         <div className="h-52 w-80 animate-pulse rounded-lg bg-neutral-200 md:w-[22.5rem]" />
         <div className="h-52 w-80 animate-pulse rounded-lg bg-neutral-200 md:w-[22.5rem]" />
         <div className="h-52 w-80 animate-pulse rounded-lg bg-neutral-200 md:w-[22.5rem]" />

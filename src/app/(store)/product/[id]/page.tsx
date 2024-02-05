@@ -1,28 +1,26 @@
 import { AddToCartButton } from "@/components/add-to-cart-button"
 import { Reviews } from "@/components/reviews"
-import { Product } from "@/entities/product"
-import { fetchApi } from "@/lib/fetchApi/fetchApi"
 import Image from "next/image"
+import products from "@/collections/products.json"
 
 interface ProductProps {
   params: { id: string }
 }
 
-async function getProduct(id: string): Promise<Product> {
-  const response = await fetchApi(`/products/${id}`, {
-    method: "GET",
-    headers: {
-      accept: "application/json"
-    }
-  })
+async function mockedApi(id: string) {
+  await new Promise((resolve) => setTimeout(resolve, 1000))
 
-  const product = await response.json()
+  const productId = parseInt(id, 10)
 
-  return product
+  return products.find((product) => product.id === productId)
 }
 
 export default async function ProductPage({ params }: ProductProps) {
-  const product = await getProduct(params.id)
+  const product = await mockedApi(params.id)
+
+  if (!product) {
+    return null
+  }
 
   return (
     <main className="container my-6 grid grid-cols-2 bg-white md:my-12 lg:grid-cols-4">
