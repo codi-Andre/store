@@ -1,0 +1,22 @@
+[
+  {
+    "id": "electronics",
+    "title": "electronics",
+    "image": "/product-14.png"
+  },
+  {
+    "id": "jewelry",
+    "title": "jewelry",
+    "image": "/product-7.png"
+  },
+  {
+    "id": "men's-clothing",
+    "title": "men's clothing",
+    "image": "/product-4.png"
+  },
+  {
+    "id": "women's-clothing",
+    "title": "women's clothing",
+    "image": "/product-19.png"
+  }
+]
