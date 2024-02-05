@@ -24,6 +24,7 @@ export function ProductCard({
       <li className="relative flex max-w-[22.5rem] flex-col items-center rounded-lg bg-accent-100 p-4 pb-2 md:min-w-[22.5rem]">
         <Link className="grid grid-cols-2" href={`/product/${id}`}>
           <Image
+            loading="lazy"
             className="row-span-2 h-32 w-32 object-scale-down"
             alt=""
             src={image}

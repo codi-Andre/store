@@ -12,6 +12,7 @@ export function CategoryCard({ id, image, title }: CategoryCardProps) {
     <Link href={`/category/${id}`}>
       <figure className="flex min-w-56 items-center gap-2 rounded-xl bg-white p-2 shadow-2xl duration-300 hover:scale-125">
         <Image
+          loading="lazy"
           className="h-16 w-16 object-scale-down"
           alt=""
           src={image}

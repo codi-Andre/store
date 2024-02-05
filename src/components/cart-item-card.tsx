@@ -29,6 +29,7 @@ export function CartItemCard({ id, image, price, title }: CartItemCardProps) {
       key={id}
     >
       <Image
+        loading="lazy"
         className="row-span-3 h-24 w-24 self-center justify-self-center object-scale-down"
         alt=""
         src={image}
