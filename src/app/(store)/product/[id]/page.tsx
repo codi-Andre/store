@@ -25,7 +25,7 @@ export default async function ProductPage({ params }: ProductProps) {
   const product = await getProduct(params.id)
 
   return (
-    <main className="container my-6 grid grid-cols-2 md:my-12 lg:grid-cols-4">
+    <main className="container my-6 grid grid-cols-2 bg-white md:my-12 lg:grid-cols-4">
       <h2 className="col-span-2 mt-6 text-lg font-bold">{product.title}</h2>
 
       <p className="lg:col-span-2">{product.category}</p>
