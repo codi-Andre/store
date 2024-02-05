@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="bg-shapes-pattern antialiased">{children}</body>
     </html>
   )
 }

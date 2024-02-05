@@ -26,6 +26,10 @@ const config: Config = {
         inside: "inset 4px 4px 5px rgba(0,0,0,0.3)",
         outside: "4px 4px 4px rgba(0,0,0,0.3)"
       },
+      backgroundImage: {
+        "shapes-pattern":
+          "url('/bg-shapes-1.svg'), url('/bg-shapes-2.svg'), url('/bg-shapes-3.svg')"
+      },
       colors: {
         text: {
           50: "var(--text-50)",

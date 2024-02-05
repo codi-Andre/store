@@ -31,10 +31,12 @@ export function Cart() {
 
   return (
     <section
-      className={`${isOpen ? "flex" : "hidden"} fixed right-0 top-0 h-screen min-w-[22.5rem] max-w-[22.5rem]
-       animate-slide-left flex-col bg-neutral-100`}
+      className={`${isOpen ? "flex" : "hidden"} fixed right-0 top-0 h-screen min-w-[22.5rem] max-w-[22.5rem] animate-slide-left
+       flex-col bg-neutral-100 shadow-2xl`}
     >
-      <h2 className="p-4 text-xl font-bold">Your cart</h2>
+      <h2 className="mb-1 bg-white p-4 text-xl font-bold shadow-md">
+        Your cart
+      </h2>
 
       <button
         className="absolute right-2 top-2 p-2"
@@ -52,7 +54,7 @@ export function Cart() {
 
       <ul
         role="list"
-        className="flex flex-1 flex-col gap-4 overflow-y-auto px-4 pb-4"
+        className="flex flex-1 flex-col gap-4 overflow-y-auto px-4 py-4"
       >
         {filteredItems.map((product) => (
           <CartItemCard
@@ -65,7 +67,7 @@ export function Cart() {
         ))}
       </ul>
 
-      <div className="flex justify-between p-4">
+      <div className="mt-1 flex justify-between bg-white p-4 shadow-[0px_-2px_10px_rgba(0,0,0,0.2)]">
         <p className="p-2">
           Total:{" "}
           <span>
